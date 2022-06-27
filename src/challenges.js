@@ -15,9 +15,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let palavraSeparada;
+  palavraSeparada = frase.split(" ");
+  return palavraSeparada;
 }
+console.log(splitSentence("go trybe"));
+
 
 // Desafio 4
 function concatName() {
