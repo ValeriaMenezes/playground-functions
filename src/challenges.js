@@ -20,18 +20,31 @@ function splitSentence(frase) {
   palavraSeparada = frase.split(" ");
   return palavraSeparada;
 }
-console.log(splitSentence("go trybe"));
 
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Desafio 4  !!! perguntar
+function concatName(arrayStrings) {
+  let primeiro;
+  let ultimo;
+  let posicoes;
+
+  for (let index = 0; index < arrayStrings.length; index += 1) {
+  primeiro = arrayStrings[0];
+  ultimo = arrayStrings[arrayStrings.length -1];
+  posicoes = ultimo + ", " + primeiro;
+  }
+  return posicoes;
 }
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = wins * 3;
+  ties = ties * 1;
+  let totalPontos  = wins + ties;
+  return totalPontos;
 }
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
