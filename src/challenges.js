@@ -22,34 +22,46 @@ function splitSentence(frase) {
 }
 
 
-// Desafio 4  !!! perguntar
+// Desafio 4
 function concatName(arrayStrings) {
   let primeiro;
   let ultimo;
   let posicoes;
 
   for (let index = 0; index < arrayStrings.length; index += 1) {
-  primeiro = arrayStrings[0];
-  ultimo = arrayStrings[arrayStrings.length -1];
-  posicoes = ultimo + ", " + primeiro;
+    primeiro = arrayStrings[0];
+    ultimo = arrayStrings[arrayStrings.length - 1];
+    posicoes = ultimo + ", " + primeiro;
   }
   return posicoes;
 }
-// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   wins = wins * 3;
   ties = ties * 1;
-  let totalPontos  = wins + ties;
+  let totalPontos = wins + ties;
   return totalPontos;
 }
-console.log(footballPoints(14, 8));
+// console.log(footballPoints(14, 8));
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+// Desafio 6  
+function highestCount(arrayInteiros) {
+  let maiorElemento = arrayInteiros[0];
+  let quantidadeRepete = 0;
+  for (index = 0; index < arrayInteiros.length; index += 1) {
+    if (arrayInteiros[index] > maiorElemento) {
+      maiorElemento = arrayInteiros[index];
+    }
+  }
+  for (index2 = 0; index2 < arrayInteiros.length; index2 += 1) {
+    if (maiorElemento === arrayInteiros[index2]) {
+      quantidadeRepete += 1;
+    }
+  }
+  return quantidadeRepete;
+ }
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
