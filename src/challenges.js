@@ -96,15 +96,44 @@ function fizzBuzz(arrayNum) {
   }
   return resultado;
 }
- console.log(fizzBuzz([9, 25]));
+//  console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  const vogais = ['a', 'e', 'i', 'o', 'u'];
+  const numeros = ['1', '2', '3', '4', '5'];
+  let encodedStr = '';
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    // console.log('char -->', char);
+    let index = vogais.indexOf(char);
+    // console.log('index -->', index);
+    if (index !== -1) {
+      encodedStr += numeros[index];
+    } else {
+      encodedStr += char;
+    }
+  }
+  return encodedStr;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('hi there!'));
+
+function decode(str) {
+  const vogais = ['a', 'e', 'i', 'o', 'u'];
+  const numeros = ['1', '2', '3', '4', '5'];
+  let decodedStr = '';
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    let index = numeros.indexOf(char);
+    if (index !== -1) {
+      decodedStr += vogais[index];
+    } else {
+      decodedStr += char;
+    }
+  }
+  return decodedStr;
 }
+console.log(decode('h3 th2r2'));
 
 // Desafio 10
 function techList() {
