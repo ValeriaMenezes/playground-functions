@@ -133,11 +133,24 @@ function decode(str) {
   }
   return decodedStr;
 }
-console.log(decode('h3 th2r2'));
+// console.log(decode('h3 th2r2'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  if (!techs || techs.length === 0) {
+    return 'Vazio!';
+  }
+
+  let techList = [];
+
+  techs.sort().forEach((tech) => {
+    techList.push({
+      tech: tech,
+      name: name,
+    });
+  });
+
+  return techList;
 }
 
 module.exports = {
