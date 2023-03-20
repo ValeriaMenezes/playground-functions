@@ -98,7 +98,7 @@ function encode(str) {
   const vogais = ['a', 'e', 'i', 'o', 'u'];
   const numeros = ['1', '2', '3', '4', '5'];
   let encodedStr = '';
-  for (let i = 0; i < str.length; i =+1) {
+  for (let i = 0; i < str.length; i++) {
     let char = str[i];
     let index = vogais.indexOf(char);
     if (index !== -1) {
@@ -115,7 +115,7 @@ function decode(str) {
   const vogais = ['a', 'e', 'i', 'o', 'u'];
   const numeros = ['1', '2', '3', '4', '5'];
   let decodedStr = '';
-  for (let i = 0; i < str.length; i += 1) {
+  for (let i = 0; i < str.length; i++) {
     let char = str[i];
     let index = numeros.indexOf(char);
     if (index !== -1) {
